@@ -3,9 +3,10 @@ public class Person {
     private  String lastName;
     private double height;
 
-    public Person(String firstName, String lastName) {
+    public Person(String firstName, String lastName, double height) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.height = height;
     }
 
     public String getFirstName() {
@@ -32,4 +33,11 @@ public class Person {
         this.height=height;
     }
 
+    @Override
+    public String toString() {
+        return "Name=" + firstName  +
+                " " + lastName + '\n' +
+                ", height(in metters) = " + height + '\n'
+                ;
+    }
 }
